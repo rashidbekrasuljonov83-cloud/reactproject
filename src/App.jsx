@@ -18,44 +18,43 @@ function App() {
     {
       path: "/",
       element: <Publiclayout />,
-      childen: [
+      children: [
         {
           index: true,
-          Element: <Home />,
+          element: <Home />,
         },
         {
           path: "post",
           element: <Post />,
         },
         {
-          path: "/post/:id",
+          path: "post/:id",
           element: <PostDetail />,
         },
-        {},
       ],
     },
     {
-      path: "/admin",
+      path: "admin",
       element: <Adminlayout />,
-      childen: [
+      children: [
         {
           index: true,
           element: <Dashboard />,
         },
         {
-          path: "/update",
+          path: "update",
           element: <UpdataPost />,
         },
         {
-          path: "/createposte",
+          path: "createposte",
           element: <CreatePoste />,
         },
       ],
     },
     {
-      path: "/login",
+      path: "login",
       element: <Authlayout />,
-      childen: [
+      children: [
         {
           index: true,
           element: <LoginPage />,
@@ -66,7 +65,7 @@ function App() {
       path: "*",
       element: <ErrorPage />,
     },
-  ]); //```
+  ]);
   return <RouterProvider router={router} />;
 }
 
