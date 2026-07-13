@@ -1,7 +1,7 @@
 import React from "react";
 import Adminlayout from "./layout/Adminlayout";
 import Authlayout from "./layout/Authlayout";
-import Publiclayout from "./layout/Publiclayout";
+import PublicLayout from "./layout/PublicLayout";
 import Post from "./pages/public/Post";
 import ErrorPage from "./pages/public/ErrorPage";
 import Home from "./pages/public/Home";
@@ -17,7 +17,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Publiclayout />,
+      element: <PublicLayout />,
       children: [
         {
           index: true,
