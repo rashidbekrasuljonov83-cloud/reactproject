@@ -13,7 +13,7 @@ function Button({ text, onClick, variant, icon }) {
     "inline-flex items-center justify-center w-[193px] h-[48px] text-[16px] font-semibold rounded-[20px] tracking-wide select-none transition-all duration-200 active:scale-[0.98]";
   return (
     <button
-      className={`${variants[variant]} w-17 h-8.5 rounded-2xl  cursor-pinter flex items-center justify-center gap-2`}
+      className={`${variants[variant]} w-17 h-8.5 rounded-2xl  cursor-pointer flex items-center justify-center gap-2`}
       onClick={onClick}
     >
       {text}
