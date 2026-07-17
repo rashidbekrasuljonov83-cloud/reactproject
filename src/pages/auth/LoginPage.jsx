@@ -2,7 +2,9 @@ import React from "react";
 import Button from "../../components/Button";
 
 const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-const FORM_URL = import.meta.env.VITE_API_FORM_URL;
+const FORM_URL =
+  import.meta.env.VITE_API_FORM_URL || "https://tevoj98108.pythonanywhere.com/";
+``;
 
 import { useRef } from "react";
 import { toast } from "react-toastify";
