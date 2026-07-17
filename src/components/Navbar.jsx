@@ -9,7 +9,9 @@ function Navbar() {
         <div className="flex space-x-4 gap-8  items-center justify-center">
           <Link to="/">Home</Link>
           <Link to="post">Post</Link>
-          <Button variant={"secondary"} text={"login"} />
+          <Link to="/login">
+            <Button variant={"secondary"} text={"login"} />
+          </Link>
         </div>
       </div>
     </nav>

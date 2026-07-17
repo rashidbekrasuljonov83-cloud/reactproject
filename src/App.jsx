@@ -11,6 +11,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import UpdataPost from "./pages/admin/UpdataPost";
 import CreatePoste from "./pages/admin/CreatePoste";
 import Navbar from "./components/Navbar";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           element: <Home />,
         },
         {
-          path: "post",
+          path: "/post",
           element: <Post />,
         },
         {
@@ -34,15 +35,19 @@ function App() {
       ],
     },
     {
-      path: "admin",
-      element: <Adminlayout />,
+      path: "/admin",
+      element: (
+        <ProtectedRoute>
+          <Adminlayout />
+        </ProtectedRoute>
+      ),
       children: [
         {
           index: true,
           element: <Dashboard />,
         },
         {
-          path: "update",
+          path: "updatepost",
           element: <UpdataPost />,
         },
         {
@@ -52,14 +57,8 @@ function App() {
       ],
     },
     {
-      path: "login",
-      element: <Authlayout />,
-      children: [
-        {
-          index: true,
-          element: <LoginPage />,
-        },
-      ],
+      path: "/login",
+      element: <LoginPage />,
     },
     {
       path: "*",

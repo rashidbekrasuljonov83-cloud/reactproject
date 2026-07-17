@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function PostCard({ image, category, date, title, description }) {
   return (
     <div className="group bg-white border border-gray-100 rounded-[24px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
@@ -40,7 +40,7 @@ function PostCard({ image, category, date, title, description }) {
           {description}
         </p>
         <div className="pt-2 flex items-center gap-1.5 text-sm font-bold text-[#5636f3] cursor-pointer group/link">
-          <span>Read more</span>
+          <Link to={"/post"}>Read more</Link>
           <svg
             className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform duration-200"
             xmlns="http://www.w3.org/2000/svg"
